@@ -6,5 +6,3 @@ RUN apt-get update; \
     wget https://rustwasm.github.io/wasm-pack/installer/init.sh -O - | sh; \
     apt-get remove -y --auto-remove wget ; \
     rm -rf /var/lib/apt/lists/*;
-
-ENTRYPOINT ["wasm-pack"]
