@@ -15,6 +15,9 @@ RUN apt-get update; \
     # Install wasm-bindgen
     cargo install wasm-bindgen-cli; \
     rustup target add wasm32-unknown-unknown; \
+    rm /usr/local/cargo/registry/cache/* -rf; \
+    rm /usr/local/cargo/registry/index/* -rf; \
+    rm /usr/local/cargo/registry/src/* -rf; \
     # Clean up
     apt-get remove -y --auto-remove libssl-dev pkg-config wget ; \
     rm -rf /var/lib/apt/lists/*;
