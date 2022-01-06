@@ -1,5 +1,5 @@
 # wasm-docker
-A Dockerised toolchain for Rust WebAssembly development, based on the rust:slim image, along with wasm-bindgen and static-web-server:
+A Dockerised toolchain for Rust WebAssembly development, based on the [rust:slim](https://hub.docker.com/_/rust) image, along with wasm-bindgen and static-web-server:
 
 ## wasm-bindgen
 "Facilitating high-level interactions between Wasm modules and JavaScript." - see https://github.com/rustwasm/wasm-bindgen.
