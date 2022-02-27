@@ -7,7 +7,7 @@ The image also includes the following tools:
 "Facilitating high-level interactions between Wasm modules and JavaScript", used to generate the final wasm image along with .js bootstrap code.
 
     # Development/debug
-    cargo build --target wasm32-unknown-unknow && wasm-bindgen --debug --no-typescript --out-dir www/pkg --target web ./target/wasm32-unknown-unknown/debug/*.wasm
+    cargo build --target wasm32-unknown-unknown && wasm-bindgen --debug --no-typescript --out-dir www/pkg --target web ./target/wasm32-unknown-unknown/debug/*.wasm
     # Release/deployment
     cargo build --release --target wasm32-unknown-unknown && wasm-bindgen --browser --no-typescript --out-dir www/pkg --target web ./target/wasm32-unknown-unknown/release/*.wasm
 
