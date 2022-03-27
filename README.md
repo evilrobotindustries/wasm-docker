@@ -19,3 +19,6 @@ A Rust-based static web server, for hosting static content over HTTPS. The follo
 A certificate can then be generated on the development host using [mkcert](https://github.com/FiloSottile/mkcert) and then supplied via the following example command when running the container, with the certificates on the host made available to the container via bind mounts:
 
     static-web-server --root ./www -g trace --http2 true --http2-tls-cert /localhost.pem --http2-tls-key /localhost-key.pem
+
+## [trunk](https://github.com/thedodd/trunk)
+"Trunk is a WASM web application bundler for Rust", included for producing trunk builds when using trunk during development.

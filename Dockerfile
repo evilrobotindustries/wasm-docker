@@ -12,6 +12,9 @@ RUN apt-get update; \
     # Install wasm-bindgen
     cargo install wasm-bindgen-cli --version ${WASM_BINDGEN_CLI_VERSION}; \
     rustup target add wasm32-unknown-unknown; \
+    # Install trunk
+    cargo install trunk; \
+    # Clean up cargo registry
     rm /usr/local/cargo/registry/cache/* -rf; \
     rm /usr/local/cargo/registry/index/* -rf; \
     rm /usr/local/cargo/registry/src/* -rf; \
