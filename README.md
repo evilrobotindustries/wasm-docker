@@ -3,13 +3,11 @@ A Dockerised toolchain for Rust WebAssembly development/deployment, based on the
 
 The image also includes the following tools:
 
-## [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen)
-"Facilitating high-level interactions between Wasm modules and JavaScript", used to generate the final wasm image along with .js bootstrap code.
+## [leptos](https://github.com/leptos-rs/cargo-leptos)
+Build tool for [Leptos](https://github.com/leptos-rs/leptos), for building fast web applications with Rust.
 
-    # Development/debug
-    cargo build --target wasm32-unknown-unknown && wasm-bindgen --debug --no-typescript --out-dir www/pkg --target web ./target/wasm32-unknown-unknown/debug/*.wasm
-    # Release/deployment
-    cargo build --release --target wasm32-unknown-unknown && wasm-bindgen --browser --no-typescript --out-dir www/pkg --target web ./target/wasm32-unknown-unknown/release/*.wasm
+    cargo leptos watch
+    cargo leptos build --release
 
 ## [static-web-server](https://github.com/joseluisq/static-web-server)
 A Rust-based static web server, for hosting static content over HTTPS. The following example starts the server using the www directory as the root and turns on tracing for debugging: 
@@ -22,3 +20,11 @@ A certificate can then be generated on the development host using [mkcert](https
 
 ## [trunk](https://github.com/thedodd/trunk)
 "Trunk is a WASM web application bundler for Rust", included for producing trunk builds when using trunk during development.
+
+## [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen)
+"Facilitating high-level interactions between Wasm modules and JavaScript", used to generate the final wasm image along with .js bootstrap code.
+
+    # Development/debug
+    cargo build --target wasm32-unknown-unknown && wasm-bindgen --debug --no-typescript --out-dir www/pkg --target web ./target/wasm32-unknown-unknown/debug/*.wasm
+    # Release/deployment
+    cargo build --release --target wasm32-unknown-unknown && wasm-bindgen --browser --no-typescript --out-dir www/pkg --target web ./target/wasm32-unknown-unknown/release/*.wasm
