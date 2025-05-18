@@ -1,6 +1,8 @@
-# Based on https://docs.github.com/en/actions/publishing-packages/publishing-docker-images
-name: Publish Docker image
-on: [push]
+name: release
+on:
+  push:
+    branches:
+      - "main"
 
 jobs:
   push_to_registry:
