@@ -1,6 +1,6 @@
-FROM rust:1.86-slim
+FROM rust:1.89-slim
 
-ENV WASM_BINDGEN_CLI_VERSION=0.2.100
+ENV WASM_BINDGEN_CLI_VERSION=0.2.101
 ENV WASM_BINDGEN_CLI_VERSION=${WASM_BINDGEN_CLI_VERSION}
 
 ENV STATIC_WEB_SERVER_VERSION=2.36.1
@@ -42,9 +42,9 @@ RUN set -eux; \
 EXPOSE 80
 
 # Metadata
-LABEL org.opencontainers.image.vendor="Evil Robot Industries" \
+LABEL org.opencontainers.image.vendor="ERI" \
     org.opencontainers.image.url="https://github.com/evilrobotindustries/wasm-docker" \
     org.opencontainers.image.title="Rust WebAssembly Toolchain" \
     org.opencontainers.image.description="A toolchain for Rust WebAssembly development." \
-    org.opencontainers.image.version="0.2" \
+    org.opencontainers.image.version="0.3" \
     org.opencontainers.image.documentation="https://github.com/evilrobotindustries/wasm-docker"
